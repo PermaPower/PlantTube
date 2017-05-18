@@ -17,6 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Create a new view
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        // Instatiate the rootViewController -> HomeViewController class
+        let layout = UICollectionViewFlowLayout()
+        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
+        
+        // OCustomization after application launch for NavigationBar
+        UINavigationBar.appearance().barTintColor = Color.darkText.value
+        UINavigationBar.appearance().tintColor = Color.darkBackground.value
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: Color.lightText.value]
+        
         return true
     }
 

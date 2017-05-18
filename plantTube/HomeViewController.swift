@@ -22,6 +22,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Register the cell ID with the collectionView
         collectionView?.register(PlantCollectionViewCellACollectionViewCell.self, forCellWithReuseIdentifier: cellID)
         
+        
         // Set the default background color for the collectionView
         collectionView?.backgroundColor = UIColor.white
             
@@ -36,7 +37,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     // Return the number of cells in collectionView
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 15
     }
     
     // Set the size of each collectionView Cell
@@ -46,11 +47,37 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     // For each cell in collecctionView
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PlantCollectionViewCellACollectionViewCell
         
-        cell.backgroundColor = getRandomColor()
         
-        return cell
+        switch indexPath.row {
+            
+        case 0:
+            collectionView.register(PlantCollectionViewCellACollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PlantCollectionViewCellACollectionViewCell
+            cell.backgroundColor = getRandomColor()
+            return cell
+            
+        case 1:
+            collectionView.register(PlantCollectionViewCellBCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PlantCollectionViewCellBCollectionViewCell
+            cell.backgroundColor = getRandomColor()
+            return cell
+ 
+            
+        case 2:
+            collectionView.register(PlantCollectionViewCellBCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PlantCollectionViewCellBCollectionViewCell
+            cell.backgroundColor = getRandomColor()
+            return cell
+            
+        default:
+            collectionView.register(PlantCollectionViewCellACollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PlantCollectionViewCellACollectionViewCell
+            cell.backgroundColor = getRandomColor()
+            return cell
+
+        }
+        
     }
     
     // Function to generate a random color

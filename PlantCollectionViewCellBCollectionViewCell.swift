@@ -1,5 +1,5 @@
 //
-//  PlantCollectionViewCellACollectionViewCell.swift
+//  PlantCollectionViewCellBCollectionViewCell.swift
 //  plantTube
 //
 //  Created by David on 18/5/17.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class PlantCollectionViewCellACollectionViewCell: UICollectionViewCell {
-    
+class PlantCollectionViewCellBCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -18,7 +17,7 @@ class PlantCollectionViewCellACollectionViewCell: UICollectionViewCell {
         textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         textLabel.font = UIFont.systemFont(ofSize: UIFont.smallSystemFontSize)
         textLabel.textAlignment = .center
-        textLabel.text = "Plant A"
+        textLabel.text = "Plant B"
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(textLabel)
         
@@ -26,12 +25,13 @@ class PlantCollectionViewCellACollectionViewCell: UICollectionViewCell {
         let verticalContraints = NSLayoutConstraint(item: textLabel, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: contentView, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
         
         contentView.addConstraints([horizontalContraints,verticalContraints])
-    
-
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+  
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		638C27591ECD3BE500758CF6 /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C27581ECD3BE500758CF6 /* UIColorExtention.swift */; };
+		638C275B1ECD47AE00758CF6 /* PlantCollectionViewCellACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C275A1ECD47AE00758CF6 /* PlantCollectionViewCellACollectionViewCell.swift */; };
 		639A45DD1ECC07E900CE2DFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A45DC1ECC07E900CE2DFD /* AppDelegate.swift */; };
 		639A45DF1ECC07E900CE2DFD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A45DE1ECC07E900CE2DFD /* HomeViewController.swift */; };
 		639A45E21ECC07E900CE2DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639A45E01ECC07E900CE2DFD /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		638C27581ECD3BE500758CF6 /* UIColorExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
+		638C275A1ECD47AE00758CF6 /* PlantCollectionViewCellACollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCollectionViewCellACollectionViewCell.swift; sourceTree = "<group>"; };
 		639A45D91ECC07E900CE2DFD /* plantTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plantTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639A45DC1ECC07E900CE2DFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639A45DE1ECC07E900CE2DFD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				639A45DE1ECC07E900CE2DFD /* HomeViewController.swift */,
+				638C275A1ECD47AE00758CF6 /* PlantCollectionViewCellACollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				638C27591ECD3BE500758CF6 /* UIColorExtention.swift in Sources */,
 				639A45DF1ECC07E900CE2DFD /* HomeViewController.swift in Sources */,
 				639A45DD1ECC07E900CE2DFD /* AppDelegate.swift in Sources */,
+				638C275B1ECD47AE00758CF6 /* PlantCollectionViewCellACollectionViewCell.swift in Sources */,
 				639A45E51ECC07E900CE2DFD /* plantTube.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

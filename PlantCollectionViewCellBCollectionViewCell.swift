@@ -9,6 +9,7 @@
 import UIKit
 
 class PlantCollectionViewCellBCollectionViewCell: UICollectionViewCell {
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -25,6 +26,7 @@ class PlantCollectionViewCellBCollectionViewCell: UICollectionViewCell {
         let verticalContraints = NSLayoutConstraint(item: textLabel, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: contentView, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
         
         contentView.addConstraints([horizontalContraints,verticalContraints])
+        
         
         
     }

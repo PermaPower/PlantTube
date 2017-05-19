@@ -26,6 +26,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Set the default background color for the collectionView
         collectionView?.backgroundColor = UIColor.white
             
+            
     }
 
     // InvalidateLayout upon rotation of device
@@ -45,12 +46,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return CGSize(width: view.frame.width, height: 100)
     }
     
+    // Refresh data for collectionView to stop crashing
+    func prepareForReuse() {
+        collectionView?.reloadData()
+    }
+    
     // For each cell in collecctionView
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
         switch indexPath.row {
-            
         case 0:
             collectionView.register(PlantCollectionViewCellACollectionViewCell.self, forCellWithReuseIdentifier: cellID)
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PlantCollectionViewCellACollectionViewCell
@@ -62,7 +66,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PlantCollectionViewCellBCollectionViewCell
             cell.backgroundColor = getRandomColor()
             return cell
- 
             
         case 2:
             collectionView.register(PlantCollectionViewCellBCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
